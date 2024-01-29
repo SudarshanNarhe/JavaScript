@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        function circle(rad){
+            return 3.14*rad*rad
+        }
+
+        function rectangle(length, width){
+            return length*width
+        }
+
+        function square(side){
+            return side*side
+        }
+
+        function triangle(height,base){
+            return 0.5*base*height
+        }
+
+        let choice=parseInt(prompt('Enter number which area you want to calculate 1.Circle  2.Rectangle  3.Square  4.Triangle'))
+        if(choice==1){
+         let radius=parseFloat(prompt('Enter a radius '))
+         document.write("Area of a Circle is : "+circle(radius))
+        }
+        else if (choice==2){
+            let length=parseFloat(prompt('Enter a length of rectangle '))
+            let width= parseFloat(prompt('Enter a width of rectangle '))
+         document.write("Area of a Rectangle is : "+rectangle(length,width))
+        }
+        else if(choice==3){
+            let side=parseFloat(prompt("Enter a side of Square "))
+            document.write("Area of a Square is : "+square(side))
+        }
+        else if(choice==4){
+            let height=parseFloat(prompt("Enter a height of triangle"))
+            let base=parseFloat(prompt("Enter a base of a triangle"))
+            document.write("Area of a Triangle is : "+triangle(height,base))
+        }
+        else
+        document.write("Invalid input...")
+
+
+    </script>
+</body>
+</html>

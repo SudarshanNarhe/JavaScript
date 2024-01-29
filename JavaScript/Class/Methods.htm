@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Employee{
+            id
+            name
+
+            AcceptDetails(id,name){
+                this.id=id;
+                this.name=name;
+            }
+            Display(){
+                console.log(this.id+"  "+this.name)
+            }
+        }
+        let emp= new Employee()
+        emp.AcceptDetails(101,'Sudarshan')
+        let emp1= new Employee()
+        emp1.AcceptDetails(102,'Suraj')
+        let emp2= new Employee()
+        emp2.AcceptDetails(103,'Yogesh')
+        emp.Display()
+        emp1.Display()
+        emp2.Display()
+    </script>
+</body>
+</html>

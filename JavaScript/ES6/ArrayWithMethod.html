@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var num;  
+num = [2,4,6,8];  
+console.log(num)
+// using Constructor
+
+var num1 = new Array(5); 
+for(i=0;i<num1.length;i++){  
+num1[i]=i*5;  
+console.log(num1[i]);  
+}  
+//using comma seperated value
+var num2 = new Array(1,2,3,4,5);  
+var i;  
+for(i=0;i<num2.length;i++){  
+console.log(num2[i]);  
+}  
+//using passing Array to function
+
+var rainbow = new Array("Violet", "Indigo", "Blue", "Green", "Yellow", "Orange", "Red");  
+function show(rainbow) {      
+   for(var i = 0;i<rainbow.length;i++) {              
+      console.log(rainbow[i])   
+   }   
+}   
+show(rainbow) 
+
+//Methods Of Array
+
+
+let color=Array.from('rgby');
+for(let i of color)
+{
+    document.write(i)
+}
+
+/////////////////
+let name = Array.of(42)  
+  
+console.log(name)  
+console.log(name.length)  
+////////////////////
+var colours = ["Red", "Yellow", "Blue", "Black"];  
+var show = colours.entries();  
+  
+for (i of show) {  
+  console.log(i);  
+}  
+//////////////////////////////////
+var colors = ["Red", "Yellow", "Blue", "Black"];  
+var showColor = colors.entries();  
+console.log(...showColor);  
+
+
+//////////////////
+
+var coloursKey = ["Red", "Yellow", "Blue", "Black"];  
+var showKey = coloursKey.keys();  
+console.log(...showKey);  
+//////////////////////
+
+var coloursValue = ["Red", "Yellow", "Blue", "Black"];  
+var showValue = coloursValue.values();  
+console.log(...showValue);  
+
+/////////////////////////////
+
+
+var coloursFill = ["Red", "Yellow", "Blue", "Black"];  
+var showFill = coloursFill.fill("Green",2,4);  
+console.log(...showFill);  
+////////////////////////////////////////////
+
+///Array Destructor
+
+var colorsRainbow = ["Violet", "Indigo", "Blue", "Green", "Yellow", "Orange", "Red"];  
+  
+// destructuring assignment  
+var[color1, color2, color3] = colorsRainbow;  
+  
+console.log(color1); // Violet  
+console.log(color2); // Indigo  
+console.log(color3); // Blue  
+
+console.log(colorsRainbow``)
+    </script>
+</body>
+</html>

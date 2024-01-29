@@ -1,0 +1,25 @@
+<!-- ⦁	Create array of object subject which contain [id, name , subtopic]
+    and subtopic conatain[topicid,topicname] -->
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+          
+           var arr=[{id:11, name:'Sudarshan', subtopic:[{topicid:1, topicname:'Java'}]},
+                    {id:12, name:'Sunil', subtopic:[{topicid:2, topicname:'SQL'}]}]
+          
+           for(let i=0; i<arr.length; i++){
+                document.write("<br>"+arr[i].id+" "+arr[i].name)
+                for(let j=0; j<arr[i].subtopic.length; j++){
+                    document.write(" "+arr[i].subtopic[j].topicid+" "+arr[i].subtopic[j].topicname)
+                }
+           }
+        </script>
+    </body>
+    </html>

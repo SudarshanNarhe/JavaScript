@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        var d =new Date()   // it gives me current date with time and day
+        document.write(d)
+
+        // ISO ---- yyyy-mm-dd
+        // short date ---- mm-dd-yyyy
+        // long date ----- '24 Jan 2024' OR 'Jan 24 2024'
+
+        var dt= new Date('2023-04-17')
+        document.write("<br>"+dt)
+
+        var dt2= new Date('04/25/2020')
+        document.write("<br>"+dt2)
+
+        // Methods 
+        document.write("<br>Date : "+dt.getDate())
+        document.write("<br>Year : "+dt.getFullYear())
+        document.write("<br>Day : "+dt.getDay())
+        // for day sun=0 mon=1 and so on
+        document.write("<br>Month : "+dt.getMonth()) 
+        // for month it will start from 0 so to accurate the data we have to add 1
+        document.write("<br>Month : "+(dt.getMonth()+1)) 
+        document.write("<br>Hourse : "+dt.getHours())
+        document.write("<br>Minutes : "+dt.getMinutes())
+        document.write("<br>Seconds : "+dt.getSeconds())
+        document.write("<br>Time Zone OffSet : "+dt.getTimezoneOffset())
+        // it gives times in minutes
+
+    </script>
+
+
+</body>
+</html>

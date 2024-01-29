@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Object.is() is used for comparison of two strings.
+////Object.is() is used for comparison of two numbers.
+//Object.is() is used for comparing the polarity of two numbers.
+//Object.is() is used for comparison of two objects.
+let result1=Object.is('geeksforgeeks', 'geeksforgeeks');
+
+console.log(result1)
+
+console.log(Object.is('geeksforgeeks', 'gfg'))
+console.log(Object.is(0,-0))
+
+var check = { a: 100 };
+     console.log(   Object.is(check, check));  
+    </script>
+</body>
+</html>

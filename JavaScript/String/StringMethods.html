@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StringAndMethods</title>
+  </head>
+  <body>
+    <script>
+      var str = "I like India Country";
+
+      document.write(str);
+
+      // length
+      document.write("<br>length : " + str.length);
+      // Position of character
+      document.write("<br>char at position : " + str.charAt(3));
+      //uppercase
+      document.write("<br>Uppercase : " + str.toUpperCase());
+      //lowercase
+      document.write("<br>Lowercase : " + str.toLowerCase());
+      //substring
+      document.write("<br>substring : " + str.substring(2, 7));
+      //substr
+      document.write("<br>subtstr : " + str.substr(4));
+      //substr
+      document.write("<br>substr : " + str.substr(2, 8));
+      //concat
+      document.write("<br>concat : " + str.concat(" Always"));
+      //trimstring from start
+      document.write("<br>StringTrimming : " + str.trimStart());
+      //trimstring from end
+      document.write("<br>StringTrimming : " + str.trimEnd());
+      //split
+      // if we give a space it gives a whole word othrwise it give a letter if we dont give a space
+      document.write("<br>split : " + str.split(""));
+      //replace
+      document.write("<br>Replace : " + str.replace("like", "love"));
+    </script>
+  </body>
+</html>

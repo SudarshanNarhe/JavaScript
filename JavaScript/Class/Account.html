@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Account{
+            acNo
+            custName
+            balance=10000;
+
+            constructor(acNo,custName){
+                this.acNo=acNo;
+                this.custName=custName
+            }
+            
+            deposit(amt){
+                this.balance=this.balance+amt
+                this.showRecords()
+            }
+
+            withdraw(amt){
+                if(amt<this.balance){
+                    this.balance=this.balance-amt;
+                    this.showRecords()
+                }
+                else{
+                    document.write("Insufficient Balance....")
+                }
+            }
+
+            showRecords(){
+                document.write("Account No : "+this.acNo+"<br>Account Holder Name : "+this.custName+"<br>Balance : "+this.balance)
+            }
+
+        }
+
+        let cust=new Account(2001,'Sudarshan')
+        let choice=prompt('Enter number 1 : deposit amount 2 : withdraw amount 3 : show records')
+        if(choice==1){
+            let amt =parseInt(prompt("Enter amount for deposit"))
+            cust.deposit(amt)
+        }
+        else if (choice==2){
+            let amt =parseInt(prompt("Enter amount for withdraw"))
+            cust.withdraw(amt)
+        }
+        else{
+            cust.showRecords()
+        }
+    </script>
+</body>
+</html>

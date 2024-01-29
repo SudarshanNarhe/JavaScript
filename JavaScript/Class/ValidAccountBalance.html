@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let user={
+
+            get balance(){
+                return "ACNo : "+this.AcNo+"  BALANCE : "+this.Balance;
+            },
+            set balance(value){
+                let arr=value.split(" ")
+                if(arr[1]<5000){
+                    alert("Balance is less than 5000")
+                }
+                else{
+                    [this.AcNo,this.Balance]=value.split(" ")
+                }
+            }
+        }
+        user.balance="453626536266, 2000"
+        alert(user.balance)
+    </script>
+</body>
+</html>

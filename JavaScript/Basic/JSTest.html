@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSTest</title>
+</head>
+<body>
+    <h3 id="test"></h3>
+<script>
+
+    var num=20
+    let city='pune'
+    const name="Sudarshan"
+// display on console
+    console.log(num)
+    console.log(city)
+    console.log(name)
+
+//display on browers
+    document.write(num)
+    document.write("<br>"+city)
+    document.write("<br>"+name)
+
+//display using html tag
+    document.getElementById('test').innerHTML=num        //  it can pass only one value at a time
+  //  document.getElementById('test').innerHTML=city
+   // document.getElementById('test').innerHTML=name
+
+//using window alter
+    window.alert("This is JS testing...")
+
+</script>
+
+</body>
+</html>

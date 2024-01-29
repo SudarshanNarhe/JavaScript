@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let uname = 'Anil',
+            udivision = 'First';
+
+        let user = {
+            uname,
+            udivision
+        };
+        console.log(user.uname);
+        console.log(user.udivision);
+
+        //////////////////////
+
+
+        let newUser = {
+            firstName: "Sunil",
+            lastName: "Kumar",
+            fullName: function () {
+                return this.firstName + " " + this.lastName;
+            }
+        };
+
+        console.log(newUser.fullName())
+
+        /////////////////  Object.assign() //////////////
+
+        var emp1 = { 1: 'Amit', 2: 'Yash' }
+        var emp2 = { 3: 'Neha' }
+        var emp3 = { 4: 'Anup', 5: 'sonia' }
+
+        var final_obj = Object.assign(emp1, emp2, emp3);
+        console.log(final_obj);
+
+
+        var obj1 = { 1: "Hello", 2: "World" };
+        var obj2 = { 3: "Welcome", 4: "to" };
+        var obj3 = { 5: "javaTpoint" }
+
+        // Using Object.assign()   
+        var final_obj = Object.assign(obj1, obj2, obj3);
+        console.log(final_obj);
+
+        ///Object Cloning    Object.assign()
+        let objUser = {
+            name: 'Anil',
+            age: 22
+        };
+        let cloneobj = Object.assign({}, objUser);
+
+        cloneobj.age = 32;
+
+        console.log(objUser);
+        console.log(cloneobj);
+
+///Object Destructor
+
+const num = {x: 100, y: 200};  
+const {x, y} = num;  
+  
+console.log(x); // 100  
+console.log(y); // 200  
+
+////////
+
+
+const student = {name: 'Arun', position: 'First', rollno: '24'};  
+const {name, position, rollno} = student;  
+console.log(name); // Arun  
+console.log(position); // First  
+console.log(rollno); // 24  
+
+////
+const {x1 = 100, y1 = 200} = {x1: 500};  
+  
+console.log(x1); // 500  
+console.log(y1); // 200  
+///Assignment without declaration
+
+let name1, division;  
+({name1, division} = {name1: 'Anil', division: 'First'});   
+console.log(name1); // Anil  
+console.log(division); // First
+    </script>
+</body>
+</html>

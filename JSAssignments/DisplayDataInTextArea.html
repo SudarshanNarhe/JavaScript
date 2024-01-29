@@ -1,0 +1,62 @@
+<!-- ⦁	Write a javascript code to accept data in below form and on click event display data in textarea
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form id="dataform">
+      <label for="name"><b>Enter Name</b></label>
+      <input type="text" id="name" name="name" required /><br /><br />
+      <label for="email"><b>Enter Email</b></label>
+      <input type="email" id="mail" name="mail" required /><br /><br />
+      <label for="skill set"><b>Select from below</b></label><br />
+      C <input type="checkbox" id="C" name="C" value="C" /><br />
+      C++ <input type="checkbox" name="C++" id="C++" value="C++" /><br />
+      Java <input type="checkbox" name="Java" id="Java" value="Java" /><br />
+      Angular
+      <input
+        type="checkbox"
+        name="Angular"
+        id="Angular"
+        value="Angular"
+      /><br />
+      JS <input type="checkbox" name="JS" id="JS" value="JS" /><br /><br />
+
+      <label for="gender"><b>Gender</b></label><br />
+      Male <input type="radio" name="Gender" value="male" /> Female
+      <input type="radio" name="Gender" value="Female" /><br /><br />
+    </form>
+
+    <button onclick="displayData()">Add</button>
+    <textarea
+      name="displaytextarea"
+      id="displaytextarea"
+      cols="30"
+      rows="10"
+      readonly
+    ></textarea>
+
+    <script>
+      function displayData() {
+        // Accessing form elements
+        var name = document.getElementById("name").value;
+        var email = document.getElementById("mail").value;
+        var skillSet = Array.from(document.querySelectorAll('input[type="checkbox"]:checked')).map(function (checkbox) {
+          return checkbox.value;
+        }).join(', ');
+        var gender = document.querySelector('input[name="Gender"]:checked') ? document.querySelector('input[name="Gender"]:checked').value : '';
+
+        // Constructing display text
+        var displayText = "Name: " + name + "\nEmail: " + email + "\nSkill Set: " + skillSet + "\nGender: " + gender;
+
+        // Displaying data in textarea
+        document.getElementById("displaytextarea").value = displayText;
+      }
+    </script>
+  </body>
+</html>

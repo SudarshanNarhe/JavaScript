@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function display(emp) {
+        for (var empl of emp) {
+          document.write(
+            empl.eid + "  " + empl.ename + "  " + empl.salary + "<br>"
+          );
+        }
+      }
+      // increase a saalry whose salary is less than 25000 by 10%
+      function increaseSalary(emp) {
+        for (let i = 0; i < emp.length; i++) {
+          if (emp[i].salary < 25000) {
+            emp[i].salary = emp[i].salary + emp[i].salary * 0.1;
+          }
+        }
+        display(emp);
+      }
+
+      var employee = [
+        { eid: 101, ename: "Suraj", salary: 23000 },
+        { eid: 102, ename: "Sudarshan", salary: 17000 },
+        { eid: 103, ename: "Yogesh", salary: 27000 },
+        { eid: 104, ename: "Snehal", salary: 4500 },
+      ];
+
+      display(employee);
+      document.write("................................<br>");
+      increaseSalary(employee);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="checkData()">
+    <!-- on load event apply to the body -->
+    <script>
+        function checkData(){
+            let msg;
+            if(navigator.cookieEnabled==true){
+                msg='Cookies are enable'
+            }
+            else{
+                msg='Cookies are not unable'
+            }
+            console.log(msg)
+        }
+       
+    </script>
+</body>
+</html>

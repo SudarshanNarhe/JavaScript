@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        function addition(a,b){
+            return a+b
+        }
+
+        function substraction(a,b){
+            return a-b;
+        }
+
+        function multiplication(a,b){
+            return a*b;
+        }
+
+        function division(a,b){
+            return a/b
+        }
+
+        let choice = parseInt(prompt('Enter number which operations you want to form : 1 Addition 2 Substraction 3 Multiplication 4 Division'))
+        let num1=parseInt(prompt("Enter first number"))
+        let num2=parseInt(prompt("Enter a second number "))
+        switch(choice){
+            
+            case 1 : console.log(addition(num1,num2)) 
+            break;
+            case 2 : console.log(substraction(num1,num2))
+            break
+            case 3 : console.log(multiplication(num1,num2))
+            break
+            case 4 : console.log(division(num1,num2))
+            break
+            default : console.log('Invalid input')
+        }
+
+    </script>
+
+</body>
+</html>

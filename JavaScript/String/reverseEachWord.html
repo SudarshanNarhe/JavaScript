@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function reverseEachWord(str) {
+        var s=str.split(/\s+/)
+        var revstr = "";
+        for (let i = 0; i < s.length; i++) {
+
+          for (let j = s[i].length - 1; j >=0; j--) {
+
+            revstr = revstr + s[i].charAt(j);
+          }
+
+          revstr = revstr +' ';
+        }
+
+        document.write(revstr);
+      }
+
+      var s = prompt("Enter any string");
+      reverseEachWord(s);
+    </script>
+  </body>
+</html>

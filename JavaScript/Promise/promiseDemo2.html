@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="fun"></h1>
+    <!-- 2nd way to create and call the promise -->
+    <script>
+        function show(some){
+            document.getElementById('fun').innerHTML=some
+        }
+        
+        let myPromise=new Promise(function(resolve,reject){
+            let x=6;
+            if(x==0){
+                resolve("OK")
+            }
+            else{
+                reject("NOT OK")
+            }
+        })
+        
+        // to call the promise
+        myPromise.then(function(value){
+            show(value)
+        }, function(error){
+            show(error)
+        }
+        )
+    </script>
+</body>
+</html>

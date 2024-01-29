@@ -1,0 +1,52 @@
+<!-- ⦁	write code to create person object and array using Json -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Create a person object using JSON
+        var person = {
+          "name": "sudarshan Narhe",
+          "age": 24,
+          "city": "Pune",
+          "isStudent": false
+        };
+        
+        // convert into JSON format
+        var personJso=JSON.stringify(person,null,2)
+
+        // Create an array of persons using JSON
+        var peopleArray = [
+          {
+            "name": "Suraj",
+            "age": 25,
+            "city": "Pandharpur",
+            "isStudent": true
+          },
+          {
+            "name": "Yogesh",
+            "age": 35,
+            "city": "Nashik",
+            "isStudent": false
+          },
+          {
+            "name": "Abhishek",
+            "age": 28,
+            "city": "Nagpur",
+            "isStudent": true
+          }
+        ];
+          
+        // convert into JSON format
+        var peopleJso=JSON.stringify(peopleArray,null,2)
+    
+        // Display the person object and array in the console
+        console.log("Person Object:", personJso);
+        console.log("People Array:", peopleJso);
+      </script>
+</body>
+</html>

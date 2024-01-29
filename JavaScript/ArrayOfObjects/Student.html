@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        function display(std){
+
+            for(var st of std){
+                document.write(st.sid+"  "+st.sname+"  "+st.marks+"<br>")
+            }
+
+        }
+
+        function findstud(std){
+            
+            for(let i=0;i<std.length;i++){
+                if(std[i].marks>75){
+                    document.write(std[i].sid+"  "+std[i].sname+"  "+std[i].marks+"<br>")
+                }
+            }
+        }
+
+        var student=[{sid : 11, sname : 'Suraj', marks : 78},
+                    {sid : 12, sname : 'Sudarshan',marks : 82},
+                    {sid : 13, sname : 'Yogesh', marks : 73}]
+        display(student)
+        document.write("<br>....................................<br>")
+        findstud(student)
+    
+    </script>
+</body>
+</html>

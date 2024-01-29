@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        //without parameter
+        var x=()=>{
+            document.write("This is arrow demo")
+        }
+        x(); 
+        document.write("<br>")
+        //with single parameter    -- we can write without a brackets 
+        var y=a=>{
+            document.write(a)
+        }
+        y(2)
+
+        document.write("<br>")
+        //with multiple parameters  -- but for the more than one we have to keep it in brackets
+        var z=(a,b)=>{
+            document.write(a+b)
+        }
+        z(10,20)
+
+    </script>
+
+</body>
+</html>

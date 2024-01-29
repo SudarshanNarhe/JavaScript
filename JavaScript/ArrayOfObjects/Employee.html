@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+
+    
+    <script>
+      function display(emp) {
+        for (let i = 0; i < emp.length; i++) {
+          document.write(
+            emp[i].eid + "  " + emp[i].ename + "  " + emp[i].salary + "<br>"
+          );
+        }
+      }
+
+      function displaySalaryMorethan4500(emp) {
+        for (var emp of employee) {
+          if (emp.salary > 45000) {
+            document.write(
+              "<br>" + emp.eid + "  " + emp.ename + "  " + emp.salary
+            );
+          }
+        }
+      }
+
+      function calPF(emp) {
+        for (let i = 0; i < emp.length; i++) {
+          emp[i].salary = emp[i].salary * 0.12;
+        }
+        display(emp);
+      }
+
+      var employee = [
+        { eid: 101, ename: "Suraj", salary: 54000 },
+        { eid: 102, ename: "Sudarshan", salary: 45000 },
+        { eid: 103, ename: "Yogesh", salary: 87000 },
+      ];
+
+      display(employee);
+      document.write(".......................................");
+      displaySalaryMorethan4500(employee);
+      document.write("<br>.......................................<br>");
+      calPF(employee);
+    </script>
+  </body>
+</html>

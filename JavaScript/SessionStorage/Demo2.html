@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="fun"></h1>
+    <button onclick="clickCount()">ClickME</button>
+    <script>
+        function clickCount(){
+            if(sessionStorage.clickCount){
+                sessionStorage.clickCount=Number(sessionStorage.clickCount)+1
+            }
+            else{
+                sessionStorage.clickCount=1
+            }
+
+            document.getElementById('fun').innerHTML=sessionStorage.clickCount
+        }
+    </script>
+</body>
+</html>

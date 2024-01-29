@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3 id="e1"></h3>
+    <script>
+        let myp=new Promise(function (resolve,reject){
+            let req=new XMLHttpRequest()
+            req.open('Get','https://jsonplaceholder.typicode.com/todos') // to fetch single data add todos/1
+            req.onload=function(){
+                if(req.status==200){
+                    resolve(req.response)
+                }
+                else{
+                    reject("Something is wrong")
+                }
+            }
+            req.send();
+        })
+
+        myp.then(function (Success){
+                display(Success)    
+        },
+        function (error){
+            document.getElementById('e1').innerHTML="Something is Wrong"
+        }
+        )
+        function display(Success){
+            let result=JSON.parse(Success)
+          //  document.write("User id :"+result.userId+", title : "+result.title+", id : "+result.id+", Completed : "+result.completed)
+         
+          //to fetch all data 
+            // for(let i=0;i<result.length;i++){
+            //     document.write("User id :"+result[i].userId+", title : "+result[i].title+", id : "+result[i].id+", Completed : "+result[i].completed+"<br>")
+            // }
+
+          // fetch data using table
+          let data=`<table border=1 width=100% > 
+                    <tr>
+                        <th>ID</th>
+                        <th>User Id </th>
+                        <th>Title </th>
+                        <th>Completed</th>
+                    </tr>`
+            // for a single row
+                // data+=`<tr>
+                //         <td>`+result.userId+"</td>"+
+                //         "<td>"+result.title+"</td>"+
+                //         "<td>"+result.id+"</td>"+
+                //         "<td>"+result.completed+`</td>
+                //     </tr>`
+            
+            // for all data
+                    for(let i=0;i<result.length;i++){
+                    data+=`<tr>
+                        <td>`+result[i].id+"</td>"+
+                        `<td>`+result[i].userId+"</td>"+
+                        "<td>"+result[i].title+"</td>"+
+                        "<td>"+result[i].completed+`</td>
+                    </tr>`                   
+                 }
+                data+="</table>"
+            document.getElementById('e1').innerHTML=data
+
+        }
+    </script>
+</body>
+</html>

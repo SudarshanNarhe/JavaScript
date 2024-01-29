@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function display(cars) {
+        for (var car of cars) {
+          document.write(
+            car.modelNo + "  " + car.carname + "  " + car.price + "<br>"
+          );
+        }
+      }
+      //display cars which price is more than 90000
+      function basisOfPrice(cars) {
+        for (var car of cars) {
+          if (car.price > 90000) {
+            document.write(
+              car.modelNo + " " + car.carname + " " + car.price + "<br>"
+            );
+          }
+        }
+      }
+      var car = [
+        { modelNo: 212, carname: "Maruti Suzuki", price: 89000 },
+        { modelNo: 342, carname: "Tata Nano", price: 78000 },
+        { modelNo: 623, carname: "Nexon", price: 2400000 },
+        { modelNo: 746, carname: "Audi", price: 3400000 },
+      ];
+
+      display(car);
+      document.write("...............................<br>");
+      basisOfPrice(car);
+    </script>
+  </body>
+</html>

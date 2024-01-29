@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>arthmeticOperations</title>
+</head>
+<body>
+    <Script>
+        console.log("1.Sum")
+        console.log('2.Substraction')
+        console.log('3.Multiplication')
+        console.log('4.Division')
+
+        var choice=parseInt(prompt('Enter a choice'))
+        var num1=parseInt(prompt('Enter a 1st Number'))
+        var num2=parseInt(prompt('Enter a 2nd number'))
+
+        switch(choice){
+            case 1 : console.log("Addition is : "+(num1+num2))
+            break
+            case 2 : console.log("Substraction is : "+(num1-num2))
+            break
+            case 3 : console.log("Multiplication is : "+(num1*num2))
+            break
+            case 4 : console.log("Division is : "+(num1/num2))
+            break
+            default : console.log('Invalid Choice Input')
+        }
+
+    </Script>
+</body>
+</html>

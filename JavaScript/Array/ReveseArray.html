@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        function reverse(num){
+           let temp;
+           let start=0;
+           let end =num.length-1;
+
+           while(end>start){
+                temp=num[start]
+                num[start]=num[end]
+                num[end]=temp
+                start++
+                end--
+           }
+           return num
+           // console.log("Reverse : "+num)
+           
+        }
+
+        let num=[1,2,3,4,5]
+
+       console.log("Original  : "+num)
+      //  reverse(num)
+        console.log("Reverse : "+reverse(num))
+
+    </script>
+
+</body>
+</html>

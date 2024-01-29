@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Person{
+            id
+            name
+            birthyear
+            age
+            constructor(id,name,birthyear){
+                this.id=id;
+                this.name=name;
+                this.birthyear=birthyear;
+                this.calAge()
+                this.display()
+            }
+
+            calAge(){
+                var d= new Date()
+                this.age=(d.getFullYear())-(this.birthyear)
+            }
+
+            display(){
+                document.write("ID : "+this.id+"<br>Name : "+this.name+"<br>Birthyear : "+this.birthyear+"<br>Age : "+this.age)
+            }
+        }
+
+        let per = new Person(11,'Sudarshan','2000')
+
+    </script>
+</body>
+</html>

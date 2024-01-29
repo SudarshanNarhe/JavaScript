@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="fun"></h1>
+    <script>
+        if(typeof(Storage)!="undefined"){
+            localStorage.setItem('username','Sudarshan')   //here username is a key and sudarshan is a value
+            document.getElementById('fun').innerHTML=localStorage.getItem('username')
+        }   
+        else{
+            document.getElementById('fun').innerHTML='Invalid Data'
+        }
+    </script>
+</body>
+</html>

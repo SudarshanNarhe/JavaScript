@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        var city=['pune','mumbai','nagpur','nashik']
+
+        document.write("<br> Original -----"+city)
+        
+        //length
+        document.write("<br>Length is : "+city.length)
+
+        //extract element using index
+        let cityname =city.at(1)
+        document.write("<br> Element using index ----"+cityname) 
+
+        //add element
+        city.push('banglore')
+        document.write("<br> adding element using push -----"+city)
+
+        //remove element
+        city.pop()    // it remove last element
+        document.write("<br> remove last using pop----- "+city)
+
+        //to add first element
+        city.unshift('nashik')
+        document.write("<br> add first using unshift------- "+city)
+
+        //remove first
+        city.shift()
+        document.write("<br> remove first using shift------ "+city)
+
+        // to  delete element at specific position
+        delete city[1]
+        document.write("<br> delete --------- "+city)
+
+        //to reverse 
+        city.reverse();
+        document.write("<br>Reverse ------ "+city)
+        
+        //to add and remove from position
+        city.splice(1,0,'banglore','Nagpur')
+        document.write("<br>Splice -------- "+city)
+
+        //to breakdown 
+        var newCity=city.slice(2);
+        document.write("<br>Slice ------- "+newCity)
+
+        // concate 
+       var mycity=['Jaipur','Indore']
+       document.write("<br>"+city)
+       document.write("<br>"+mycity)
+
+       var allcity=city.concat(mycity)
+       document.write("<br>Concat--------- "+allcity)
+
+       //index of and includes
+        document.write("<br> Index of  -----"+allcity.indexOf('pune'))
+        document.write("<br>LAst Index of  -----"+allcity.lastIndexOf('pune'))
+        document.write("<br> Index of  ----- : "+allcity.indexOf('delhi')) /// it return -1 if not present
+        document.write("<br> includes -----"+allcity.includes('delhi'))  //return boolean value
+        
+        //sort
+        //document.write("<br> Sorted -----"+allcity.sort())
+
+    
+        document.write("<br> hhhhSorted -----"+allcity)
+        allcity.sort(
+            function(a,b){
+              //  return a-b
+                return b-a
+            }
+        )
+        document.write("<br> Sorted -----"+allcity)
+        
+    </script>
+
+</body>
+</html>

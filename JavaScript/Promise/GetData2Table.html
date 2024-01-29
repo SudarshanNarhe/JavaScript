@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 id="e2"></h2>
+    <script>
+        let myPromise= new Promise(function(resolve,reject){
+            let req= new XMLHttpRequest()
+            req.open('Get','https://reqres.in/api/users?page=2')
+            req.onload=function(){
+                if(req.status==200){
+                    resolve(req.response)
+                }
+                else{
+                    reject('Something is Wrong')
+                }
+            }
+            req.send();
+        })
+
+        myPromise.then(
+            function(Success){
+            display(Success)
+        },
+            function(error){
+                document.getElementById('e2').innerHTML='Something is Wrong'
+            })
+        
+        function display(Success){
+            let result=JSON.parse(Success)
+            
+            // document.write("Page : "+result.page+", Per_page : "+result.per_page+", Total pages : "+result.total_pages)
+
+            // for(let i=0;i<result.data.length;i++){
+            //     document.write("<br>ID : "+result.data[i].id+"<br> mail : "+result.data[i].email+"<br> first_name : "+result.data[i].first_name+"<br>  last_name : "+result.data[i].last_name+"<br> avatar : "+result.data[i].avatar)
+            // }
+           
+            //     document.write("<br>Support <br> url : "+result.support.url+"<br>text : "+result.support.text)
+            
+                let data=`<table border=1 width=100%>
+                        <tr>
+                            <th>Page</th>
+                            <th>Per_page</th>
+                            <th>Total Pages</th>
+                            <th>Data</th>
+                            <th>Support</th>
+                        </tr>`
+
+                for(let i=0;i<result.data.length;i++){
+                data+=`<tr>
+                            <td>`+result.page+"</td>"+
+                            "<td>"+result.per_page+"</td>"+
+                            "<td>"+result.total_pages+"</td>"+
+                            "<td>"+"<br>ID : "+result.data[i].id+"<br> mail : "+result.data[i].email+"<br> first_name : "+result.data[i].first_name+"<br>  last_name : "+result.data[i].last_name+"<br> avatar : "+result.data[i].avatar+"</td>"+
+                            "<td>"+"<br>Support <br> url : "+result.support.url+"<br>text : "+result.support.text+"</td></tr>"
+                 }
+                data+="</table>"
+                    document.getElementById("e2").innerHTML=data
+                    
+        }
+    </script>
+</body>
+</html>

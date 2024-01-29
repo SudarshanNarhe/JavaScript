@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function reverseString(str) {
+        var rev = "";
+        for (let i = 0; i < str.length; i++) {
+          rev = str.charAt(i) + rev;
+        }
+        document.write(rev);
+      }
+      var s = prompt("Enter any name or String ");
+      reverseString(s);
+    </script>
+  </body>
+</html>

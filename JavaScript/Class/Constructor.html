@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Movie{
+
+            moviename
+
+            // we have to mentioned constructor to create a constuctor on class only have a single constructor
+            // constructor(){
+            //     console.log("I am in defualt")
+            // }
+            constructor(moviename){
+                this.moviename=moviename
+            }
+
+            show(){
+                console.log(this.moviename)
+            }
+
+        }
+        let m1=new Movie()
+        let m=new Movie('Harry Potter')
+        m.show()
+    </script>
+</body>
+</html>

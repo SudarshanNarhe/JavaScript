@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // here a and b is the variables for taking a values
+        // myAddition is the referance varible of another function
+        function calculate(a,b, myAddition) {
+            let c=a+b
+            myAddition(c)
+        }
+        function show(ans){
+            document.write(ans)
+        }
+        calculate(4,5,show) // we have to pass the show without paranthesis
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!-- ⦁	Write a program to print alternate values in reverse order. 
+    E.g. if array is { 15,6,1,34,9,12,2,7,3} then display 3,2,9,1,15 -->
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            
+            function reverseArr(arr){
+                let temp;
+                let start=0;
+                let end =arr.length-1;
+                while(end>start){
+                    temp=arr[start]
+                    arr[start]=arr[end]
+                    arr[end]=temp;
+                    start++;
+                    end--
+                }
+                return arr;
+            }
+            let num=[15,6,1,34,9,12,2,7,3]
+        
+            let rev=reverseArr(num)
+            for(let i=0;i<rev.length;i++){
+                if(i%2==0 || i==0){
+                    document.write(rev[i]+", ")
+                }
+            }
+            
+        </script>
+    </body>
+    </html>

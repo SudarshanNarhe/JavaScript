@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var myarr=[2,3,4,5,6]
+
+        document.write(myarr)
+        document.write("<br>....................")
+        //using for loop
+        for(let i=0;i<myarr.length;i++){
+            document.write("<br>"+myarr[i])
+        }
+        document.write("<br>....................")
+        //using for each to get elements 
+        for(let x of myarr){        // of returns the elements 
+            document.write("<br>"+x)
+        }
+        document.write("<br>....................")
+        //using for each to get index
+        for(let x in myarr){        // in returns the index 
+            document.write("<br>"+x)
+        }
+    </script>
+</body>
+</html>
