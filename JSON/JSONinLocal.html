@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //storing json data in local storage
+        let myobj={name : 'Sudarshan',age : 24, city : 'Pune'}
+        let jobj=JSON.stringify(myobj)
+        localStorage.setItem('MyJSONData',jobj)
+
+        // retriving the data
+        let user=localStorage.getItem('MyJSONData')
+        let newuser=JSON.parse(user)
+        document.write(newuser) // it will only show object object we have to retrive one one element from it
+        document.write("<br>"+newuser.name+"  "+newuser.age+" "+newuser.city)
+        console.log(newuser)
+    </script>
+</body>
+</html>

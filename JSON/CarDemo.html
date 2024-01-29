@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let car='["Audi","BMW","Ford"]'
+        let myarr=JSON.parse(car)
+        document.write(myarr[0])
+
+        document.write("<br>.......................................<br>")
+
+        for(let c of myarr){
+            document.write("<br>"+c)
+        }
+
+        let newvalue=JSON.stringify(car)
+        console.log(newvalue)
+    </script>
+</body>
+</html>
